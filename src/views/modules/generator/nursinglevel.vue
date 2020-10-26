@@ -64,24 +64,25 @@
           <span style="margin-left: 10px">{{ formatDate(scope.row.updateTime)}}</span>
         </template>
       </el-table-column>
-      <!--<el-table-column-->
-        <!--prop="delFlag"-->
-        <!--header-align="center"-->
-        <!--align="center"-->
-        <!--label="逻辑删除">-->
-        <!--<template slot-scope="scope">-->
-                    <!--<span style="margin-left: 10px">-->
-                        <!--<el-switch-->
-                          <!--v-model="scope.row.delFlag"-->
-                          <!--:active-value="1"-->
-                          <!--:inactive-value="0"-->
-                          <!--active-color="#13ce66"-->
-                          <!--inactive-color="#ff4949"-->
-                          <!--@change="handleChange(scope.row)">-->
-                        <!--</el-switch>-->
-                    <!--</span>-->
-        <!--</template>-->
-      <!--</el-table-column>-->
+      <el-table-column
+        prop="delFlag"
+        header-align="center"
+        align="center"
+        label="逻辑删除">
+        <template slot-scope="scope">
+                    <span style="margin-left: 10px">
+                        <el-switch
+                          v-model="scope.row.delFlag"
+                          :active-value="1"
+                          :inactive-value="0"
+                          active-color="#13ce66"
+                          inactive-color="#ff4949"
+                          @change="handleChange(scope.row)">
+                        </el-switch>
+                    </span>
+        </template>
+      </el-table-column>
+<!--      67-84-->
       <el-table-column
         prop="levelName"
         header-align="center"
@@ -174,7 +175,9 @@
             'key': this.dataForm.key
           })
         }).then(({data}) => {
+          console.log(data)
           if (data && data.code === 0) {
+
             this.dataList = data.page.list
             this.totalPage = data.page.totalCount
           } else {

@@ -64,24 +64,24 @@
         align="center"
         label="更新者">
       </el-table-column>
-      <el-table-column
-        prop="isDeleted"
-        header-align="center"
-        align="center"
-        label="逻辑删除">
-        <template slot-scope="scope">
-                    <span style="margin-left: 10px">
-                        <el-switch
-                          v-model="scope.row.isDeleted"
-                          :active-value="1"
-                          :inactive-value="0"
-                          active-color="#13ce66"
-                          inactive-color="#ff4949"
-                          @change="handleChange(scope.row)">
-                        </el-switch>
-                    </span>
-        </template>
-      </el-table-column>
+      <!--<el-table-column-->
+        <!--prop="isDeleted"-->
+        <!--header-align="center"-->
+        <!--align="center"-->
+        <!--label="逻辑删除">-->
+        <!--<template slot-scope="scope">-->
+                    <!--<span style="margin-left: 10px">-->
+                        <!--<el-switch-->
+                          <!--v-model="scope.row.isDeleted"-->
+                          <!--:active-value="1"-->
+                          <!--:inactive-value="0"-->
+                          <!--active-color="#13ce66"-->
+                          <!--inactive-color="#ff4949"-->
+                          <!--@change="handleChange(scope.row)">-->
+                        <!--</el-switch>-->
+                    <!--</span>-->
+        <!--</template>-->
+      <!--</el-table-column>-->
       <el-table-column
         prop="roomNumber"
         header-align="center"
