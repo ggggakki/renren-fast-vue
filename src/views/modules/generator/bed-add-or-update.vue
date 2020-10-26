@@ -42,9 +42,9 @@
         <el-form-item label="名称" prop="name">
           <el-input v-model="dataForm.name" placeholder="名称"></el-input>
         </el-form-item>
-        <el-form-item label="排序" prop="sort">
-          <el-input v-model="dataForm.sort" placeholder="排序"></el-input>
-        </el-form-item>
+<!--        <el-form-item label="排序" prop="sort">-->
+<!--          <el-input v-model="dataForm.sort" placeholder="排序"></el-input>-->
+<!--        </el-form-item>-->
       </el-form>
       <span slot="footer" class="dialog-footer">
       <el-button @click="visible = false">取消</el-button>
